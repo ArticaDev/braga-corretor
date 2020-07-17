@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 .btn {
@@ -64,6 +64,15 @@ body {
     }
 }
 
+.navbar {
+    background-image: url(../img/Ret.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 42vw;
+    background-color: white;
+    box-shadow: none;
+    transition: 0.5s;
+}
 .navbar.active {
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
     transition: 0.5s;
@@ -90,8 +99,4 @@ h6 {
 .white {
     color: white !important;
     transition: 1s;
-}
-.page-link {
-    background-color: rgb(155, 21, 25) !important;
-    border-color: white !important;
 }
