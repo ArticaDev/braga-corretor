@@ -41,7 +41,7 @@
         <!-- TODO: ADD BLUE SHAPE AT THE END OF THE NAV BAR -->
 
         <div>
-            <nav class="navbar navbar-light navbar-expand-md shadow-sm" style="margin-bottom: 25px;">
+            <nav class="navbar navbar-light navbar-expand-md" style="margin-bottom: 25px;">
                 <div class="container-fluid"><a class="navbar-brand" href="#"
                         style="width: 80px;height: 30px;margin: 0px;padding: 0px;"><img
                             class="d-flex align-items-center" src="{{ asset('assets\img\Group 1.svg') }}"
@@ -52,11 +52,11 @@
                         id="navcol-1">
                         <ul class="nav navbar-nav">
                             <li role="presentation" class="nav-item"><a class="nav-link active" href="#"
-                                    style="color: rgb(20,62,122);">Home</a></li>
+                                    style="color: rgb(255,255,255);">Home</a></li>
                             <li role="presentation" class="nav-item"><a class="nav-link" href="#"
-                                    style="color: rgb(20,62,122,0.7);">Pesquisa</a></li>
+                                    style="color: rgb(255,255,255,0.7);">Pesquisa</a></li>
                             <li role="presentation" class="nav-item"><a class="nav-link" href="#"
-                                    style="color: rgb(20,62,122,0.7);">Contato</a></li>
+                                    style="color: rgb(255,255,255,0.7);">Contato</a></li>
                         </ul>
                     </div>
                 </div>
