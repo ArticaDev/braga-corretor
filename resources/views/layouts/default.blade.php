@@ -38,25 +38,22 @@
 <body>
     <div class="sticky-top">
         <!-- Start: Header - Mobile -->
-        <!-- TODO: ADD BLUE SHAPE AT THE END OF THE NAV BAR -->
 
         <div>
-            <nav class="navbar navbar-light navbar-expand-md" style="margin-bottom: 25px;">
+            <nav class="navbar navbar-light navbar-expand-md">
                 <div class="container-fluid"><a class="navbar-brand" href="#"
                         style="width: 80px;height: 30px;margin: 0px;padding: 0px;"><img
                             class="d-flex align-items-center" src="{{ asset('assets\img\Group 1.svg') }}"
                             style="width: 80px;height: 30px;" /></a><button data-toggle="collapse"
                         data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle
-                            navigation</span><span class="navbar-toggler-icon"></span></button>
+                            navigation</span><span class="navbar-toggler-icon"
+                            style="background-image:url('../assets/img/bars-solid.svg'); color:white;"></span></button>
                     <div class="collapse navbar-collapse d-md-flex d-xl-flex justify-content-md-end justify-content-xl-end"
                         id="navcol-1">
                         <ul class="nav navbar-nav">
-                            <li role="presentation" class="nav-item"><a class="nav-link active" href="#"
-                                    style="color: rgb(255,255,255);">Home</a></li>
-                            <li role="presentation" class="nav-item"><a class="nav-link" href="#"
-                                    style="color: rgb(255,255,255,0.7);">Pesquisa</a></li>
-                            <li role="presentation" class="nav-item"><a class="nav-link" href="#"
-                                    style="color: rgb(255,255,255,0.7);">Contato</a></li>
+                            <li role="presentation" class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                            <li role="presentation" class="nav-item"><a class="nav-link" href="#">Pesquisa</a></li>
+                            <li role="presentation" class="nav-item"><a class="nav-link" href="#">Contato</a></li>
                         </ul>
                     </div>
                 </div>

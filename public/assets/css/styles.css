@@ -52,6 +52,16 @@ body {
     transition: 0.5s;
 }
 
+.nav-link {
+    color: white !important;
+}
+
+@media (max-width: 767px) {
+    .nav-link {
+        color: black !important;
+    }
+}
+
 h6 {
     margin-bottom: 0px !important;
     font-size: 18px;
