@@ -76,11 +76,12 @@
                     <i data-toggle="tooltip" data-placement="top" title="Copiar email" id="emailIcon"
                         class="icon ion-email" style="color: rgb(255,255,255); cursor:pointer;"></i></a>
                 <a
-                    href="https://api.whatsapp.com/send?phone=5517981093483&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!"><i
+                    href="https://api.whatsapp.com/send?phone=5517992451895&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!"><i
                         class="icon ion-social-whatsapp-outline" style="color: rgb(255,255,255);"></i></a>
-                <a href="https://www.instagram.com/"><i class="icon ion-social-instagram-outline"
-                        style="color: rgb(255,255,255);"></i></a>
-                <a href="https://www.facebook.com/"><i class="icon ion-social-facebook"
+                <a
+                    href="https://api.whatsapp.com/send?phone=5511948021701&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!"><i
+                        class="icon ion-social-whatsapp-outline" style="color: rgb(255,255,255);"></i></a>
+                <a href="https://www.facebook.com/terrenosembarretos/"><i class="icon ion-social-facebook"
                         style="color: rgb(255,255,255);"></i></a>
             </div>
             <ul class="list-inline">
@@ -88,6 +89,7 @@
                 <li class="list-inline-item"><a href="#" style="color: rgb(255,255,255);">Pesquisa</a></li>
                 <li class="list-inline-item"><a href="#" style="color: rgb(255,255,255);">Contato</a></li>
             </ul>
+            <p class="copyright" style="color: rgb(249,249,249);">Corretor Braga - CRECISP 69219-F / CNAI 21516</p>
             <a style="text-decoration:none;" href="https://articadev.com">
                 <p class="copyright" style="color: rgb(249,249,249);">Desenvolvido por Artica © 2020</p>
             </a>
