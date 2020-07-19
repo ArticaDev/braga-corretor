@@ -4,19 +4,33 @@
 <div class="simple-slider deskslider">
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"
+            <div class="swiper-slide view"
                 style="background-image:url(https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+                <a href="#">
+                    <div class="mask flex-center rgba-black-strong">
+                        <h1 style="color:white;">Título da casa</h1>
+                        <h3 style="color:white;margin-top:5%">Venha conferir!</h3>
+                    </div>
+                </a>
             </div>
-            <div class="swiper-slide"
+            <div class="swiper-slide view"
                 style="background-image:url(https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+                <a href="#">
+                    <div class="mask flex-center">
+                    </div>
+                </a>
             </div>
-            <div class="swiper-slide"
+            <div class="swiper-slide view"
                 style="background-image:url(https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+                <a href="#">
+                    <div class="mask flex-center">
+                    </div>
+                </a>
             </div>
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev" style="background-image: url(assets/img/Rectangle%2032.png)"></div>
-        <div class="swiper-button-next" style="background-image: url(assets/img/Rectangle%2031.png)"></div>
+        <div class="swiper-button-prev" style="background-image: url(assets/img/Rectangle%2034.png)"></div>
+        <div class="swiper-button-next" style="background-image: url(assets/img/Rectangle%2033.png)"></div>
     </div>
 </div>
 
@@ -108,11 +122,10 @@
 
                         <div class="row" style="margin-bottom: 0%;">
                             <div class="col d-flex justify-content-center"><button
-                                    onclick="location.href='{{ route('casas.show',$house->id) }}';"
-                                    class="btn btn-primary" type="button"
-                                    style="font-size: 22px;background-color:#143E7A;width: 100%;"><i
-                                        class="las la-wallet" style="margin-right:3%"></i>
-                                    <h5 class="display-price" style="  display: inline;
+                                    onclick="location.href='{{ route('casas.show',$house->id) }}';" class="btn"
+                                    type="button" style="font-size: 22px;background-color:#143E7A;width: 100%;"><i
+                                        class="las la-wallet text-white" style="margin-right:3%"></i>
+                                    <h5 class="display-price text-white" style="  display: inline;
                 ">{{ number_format($house->price, 2, '.', '') }}</h5>
                                 </button>
                             </div>
