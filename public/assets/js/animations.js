@@ -14,25 +14,22 @@ $(function () {
 
     $(".pesquisa").click(function () {
         $(".search").slideToggle();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 
     $(".config").click(function () {
         $(".filtro").slideToggle();
+        $(".text-white").toggle();
     });
 
-    $(".nav .nav-link").on("click", function () {
-        $(".nav").find(".active").removeClass("active");
-        $(this).addClass("active");
+    $(".search-button").on("click", function () {
+        $(this).toggleClass("text-green");
     });
 
     $(".home").click(function () {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         $(".nav").find(".active").removeClass("active");
         $(".home").addClass("active");
-    });
-
-    $("#imoveis").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 
     $("#contato").click(function () {

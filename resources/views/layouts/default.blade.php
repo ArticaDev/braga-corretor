@@ -70,58 +70,52 @@
         <div style="background-color: rgb(20,62,122); display:none;" class="search">
             <div class="container">
                 <div class="row">
-                    <div class="col-8"></div>
-                    <div class="col d-flex justify-content-center align-items-center"><i
-                            class="pesquisa la la-close btn" style="color: #efefef; font-size:1.5em;"></i></div>
-                </div>
-                <div class="row">
-                    <div class="col-8 d-flex align-items-center"><input type="search" placeholder="Digite o bairro"
-                            style="width:20vw;" /> <i style="margin-left:2%; font-size:1.5em;"
+                    <div class="col d-flex align-items-center"><input type="search" placeholder="Digite o bairro"
+                            style="max-width:300px;" /> <i style="font-size:1.5em;"
                             class="la la-search text-white btn"></i>
-                    </div>
-                    <div class="col d-flex justify-content-center align-items-center"><i class="la la-cog btn config"
-                            style="color: #efefef; font-size:1.5em;"></i></div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex justify-content-center align-items-center">
-                        <h4 style="color: #efefef; margin-bottom:2%;">Sugestões de imóveis</h4>
+                        <i class="la la-cog btn config" style="color: #efefef; font-size:1.5em;"></i>
+                        <i class="pesquisa la la-close btn" style="color: #efefef; font-size:1.5em;"></i>
                     </div>
                 </div>
-                <div class="filtro" style="display:none;">
+
+                <div class="filtro" style="margin-top:2%;display:none;">
 
                     <div class="row" style="margin-bottom:2%">
-                        <div class="col"><input type="text" style="width:20vw;" placeholder="Valor Máximo" /></div>
-                        <div class="col"><input type="text" style="width:20vw;" placeholder="m² máx." /></div>
+                        <div class="col"><input type="search" style="max-width:40vw;" placeholder="Valor Máximo" />
+                        </div>
+                        <div class="col"><input type="search" style="max-width:40vw;" placeholder="m² máx." /></div>
                     </div>
                     <div class="row" style="margin-bottom:3%">
-                        <div class="col d-flex align-items-center"><select style="width:12vw;">
+                        <div class="col-8 d-flex align-items-center"><select style="max-width:30vw; margin-right:2%;">
                                 <optgroup label="Nº de Quartos">
                                     <option value="12" selected>1 Quarto</option>
                                     <option value="13">2 Quartos</option>
                                     <option value="14">3+ Quartos</option>
                                 </optgroup>
                             </select>
-                            <i class="la la-car btn" style="color: #efefef; font-size:2em;"></i>
-                            <i class="la la-dribbble btn" style="color: #efefef; font-size:2em;"></i></div>
-
-                        <div class="col d-flex align-items-center"><select style="width:12vw;">
+                            <select style="max-width:35vw;">
                                 <optgroup label="Nº de Banheiros">
                                     <option value="12" selected>1 Banheiro</option>
                                     <option value="13">2 Banheiros</option>
                                     <option value="14">3+ Banheiros</option>
                                 </optgroup>
                             </select>
+                            <i class="la la-car search-button"></i>
+                            <i class="la la-dribbble search-button"></i>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col d-flex justify-content-center"><button class="btn btn-success"
                                 style="margin-bottom:2%;">Pesquisar</button></div>
-
                     </div>
+
+
                 </div>
+
             </div>
         </div>
-        <!-- End: Search -->
+    </div>
+    <!-- End: Search -->
     </div>
     @yield('content')
     <!-- Start: Footer -->
@@ -129,22 +123,25 @@
     <div class="footer-basic" style="background-color: rgb(20,62,122);">
         <footer>
             <div class="social">
-                <a href="">
+                <a href="#">
                     <i data-toggle="tooltip" data-placement="top" title="Copiar email" id="emailIcon"
                         class="icon ion-email" style="color: rgb(255,255,255); cursor:pointer;"></i></a>
                 <a
                     href="https://api.whatsapp.com/send?phone=5517992451895&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!"><i
+                        data-toggle="tooltip" data-placement="top" title="Enviar mensagem no WhatsApp 1"
                         class="icon ion-social-whatsapp-outline" style="color: rgb(255,255,255);"></i></a>
                 <a
                     href="https://api.whatsapp.com/send?phone=5511948021701&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!"><i
+                        data-toggle="tooltip" data-placement="top" title="Enviar mensagem no WhatsApp 2"
                         class="icon ion-social-whatsapp-outline" style="color: rgb(255,255,255);"></i></a>
-                <a href="https://www.facebook.com/terrenosembarretos/"><i class="icon ion-social-facebook"
+                <a href="https://www.facebook.com/terrenosembarretos/"><i data-toggle="tooltip" data-placement="top"
+                        title="Ir para o Facebook" class="icon ion-social-facebook"
                         style="color: rgb(255,255,255);"></i></a>
             </div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="#" style="color: rgb(255,255,255);">Home</a></li>
-                <li class="list-inline-item"><a href="#" style="color: rgb(255,255,255);">Pesquisa</a></li>
-                <li class="list-inline-item"><a href="#" style="color: rgb(255,255,255);">Contato</a></li>
+                <li class="list-inline-item"><a class="home" href="#" style="color: rgb(255,255,255);">Home</a></li>
+                <li class="list-inline-item"><a class="pesquisa" href="#" style="color: rgb(255,255,255);">Pesquisa</a>
+                </li>
             </ul>
             <p class="copyright" style="color: rgb(249,249,249);">Corretor Braga - CRECISP 69219-F / CNAI 21516</p>
             <a style="text-decoration:none;" href="https://articadev.com">
