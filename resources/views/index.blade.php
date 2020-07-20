@@ -46,24 +46,25 @@
 
                 <!-- Card image -->
                 <div class="simple-slider card-img-top">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
+                    <a href="#">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
 
-                            @foreach($house->image as $image)
-                            @if($loop->index < 3) <div class="swiper-slide"
-                                style="background-image:url({{ asset('images/'.$image->filename) }}); height:226px;">
+                                @foreach($house->image as $image)
+                                @if($loop->index < 3) <div class="swiper-slide"
+                                    style="background-image:url({{ asset('images/'.$image->filename) }}); height:226px;">
+                            </div>
+                            @endif
+                            @endforeach
+
                         </div>
-                        @endif
-                        @endforeach
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev" style="background-image: url(assets/img/Rectangle%2032.png)">
-                    </div>
-                    <div class="swiper-button-next" style="background-image: url(assets/img/Rectangle%2031.png)">
-                    </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev" style="background-image: url(assets/img/Rectangle%2032.png)">
+                        </div>
+                        <div class="swiper-button-next" style="background-image: url(assets/img/Rectangle%2031.png)">
+                        </div>
                 </div>
-
+                </a>
                 <!-- Card content -->
                 <div class=" card-body">
 
