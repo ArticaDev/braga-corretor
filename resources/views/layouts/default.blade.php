@@ -53,7 +53,8 @@
                         <ul class="nav navbar-nav">
                             <li role="presentation" class="nav-item"><a class="nav-link active home" href="#">Home</a>
                             </li>
-                            <li role="presentation" class="nav-item"><a class="nav-link" href="#">Pesquisa</a></li>
+                            <li role="presentation" class="nav-item"><a class="nav-link pesquisa" href="#">Pesquisa</a>
+                            </li>
                             <li role="presentation" class="nav-item"><a id="contato" class="nav-link"
                                     href="#">Contato</a></li>
                         </ul>
@@ -66,53 +67,56 @@
 
         <!-- Start: Search -->
 
-        <div style="background-color: #18171b;">
+        <div style="background-color: rgb(20,62,122); display:none;" class="search">
             <div class="container">
                 <div class="row">
                     <div class="col-8"></div>
-                    <div class="col d-flex justify-content-center align-items-center"><i class="la la-close btn"
-                            style="color: #efefef; font-size:2em;"></i></div>
+                    <div class="col d-flex justify-content-center align-items-center"><i
+                            class="pesquisa la la-close btn" style="color: #efefef; font-size:1.5em;"></i></div>
                 </div>
                 <div class="row">
                     <div class="col-8 d-flex align-items-center"><input type="search" placeholder="Digite o bairro"
-                            style="width:20vw;" />
+                            style="width:20vw;" /> <i style="margin-left:2%; font-size:1.5em;"
+                            class="la la-search text-white btn"></i>
                     </div>
                     <div class="col d-flex justify-content-center align-items-center"><i class="la la-cog btn config"
-                            style="color: #efefef; font-size:2em;"></i></div>
+                            style="color: #efefef; font-size:1.5em;"></i></div>
                 </div>
-                <div class="row" style="margin-bottom:3%">
+                <div class="row">
                     <div class="col d-flex justify-content-center align-items-center">
-                        <h5 style="color: #efefef;">Sugestões de imóveis</h5>
+                        <h4 style="color: #efefef; margin-bottom:2%;">Sugestões de imóveis</h4>
                     </div>
-                    <div class="filtro">
-                    </div>
-                    <div class="row" style="margin-bottom:3%">
+                </div>
+                <div class="filtro" style="display:none;">
+
+                    <div class="row" style="margin-bottom:2%">
                         <div class="col"><input type="text" style="width:20vw;" placeholder="Valor Máximo" /></div>
                         <div class="col"><input type="text" style="width:20vw;" placeholder="m² máx." /></div>
                     </div>
                     <div class="row" style="margin-bottom:3%">
-                        <div class="col"><select style="width:15vw;">
+                        <div class="col d-flex align-items-center"><select style="width:12vw;">
                                 <optgroup label="Nº de Quartos">
                                     <option value="12" selected>1 Quarto</option>
                                     <option value="13">2 Quartos</option>
                                     <option value="14">3+ Quartos</option>
                                 </optgroup>
-                            </select></div>
-                        <div class="col"><select style="width:15vw;">
+                            </select>
+                            <i class="la la-car btn" style="color: #efefef; font-size:2em;"></i>
+                            <i class="la la-dribbble btn" style="color: #efefef; font-size:2em;"></i></div>
+
+                        <div class="col d-flex align-items-center"><select style="width:12vw;">
                                 <optgroup label="Nº de Banheiros">
                                     <option value="12" selected>1 Banheiro</option>
                                     <option value="13">2 Banheiros</option>
                                     <option value="14">3+ Banheiros</option>
                                 </optgroup>
-                            </select></div>
+                            </select>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col d-flex justify-content-center"><i class="la la-car btn"
-                                style="color: #efefef; font-size:2em;"></i>
-                        </div>
-                        <div class="col d-flex justify-content-center"><i class="la la-dribbble btn"
-                                style="color: #efefef; font-size:2em;"></i>
-                        </div>
+                        <div class="col d-flex justify-content-center"><button class="btn btn-success"
+                                style="margin-bottom:2%;">Pesquisar</button></div>
+
                     </div>
                 </div>
             </div>
