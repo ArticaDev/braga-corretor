@@ -51,9 +51,11 @@
                     <div class="collapse navbar-collapse d-md-flex d-xl-flex justify-content-md-end justify-content-xl-end"
                         id="navcol-1">
                         <ul class="nav navbar-nav">
-                            <li role="presentation" class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                            <li role="presentation" class="nav-item"><a class="nav-link active home" href="#">Home</a>
+                            </li>
                             <li role="presentation" class="nav-item"><a class="nav-link" href="#">Pesquisa</a></li>
-                            <li role="presentation" class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                            <li role="presentation" class="nav-item"><a id="contato" class="nav-link"
+                                    href="#">Contato</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,6 +66,57 @@
 
         <!-- Start: Search -->
 
+        <div style="background-color: #18171b;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8"></div>
+                    <div class="col d-flex justify-content-center align-items-center"><i class="la la-close btn"
+                            style="color: #efefef; font-size:2em;"></i></div>
+                </div>
+                <div class="row">
+                    <div class="col-8 d-flex align-items-center"><input type="search" placeholder="Digite o bairro"
+                            style="width:20vw;" />
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center"><i class="la la-cog btn config"
+                            style="color: #efefef; font-size:2em;"></i></div>
+                </div>
+                <div class="row" style="margin-bottom:3%">
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <h5 style="color: #efefef;">Sugestões de imóveis</h5>
+                    </div>
+                    <div class="filtro">
+                    </div>
+                    <div class="row" style="margin-bottom:3%">
+                        <div class="col"><input type="text" style="width:20vw;" placeholder="Valor Máximo" /></div>
+                        <div class="col"><input type="text" style="width:20vw;" placeholder="m² máx." /></div>
+                    </div>
+                    <div class="row" style="margin-bottom:3%">
+                        <div class="col"><select style="width:15vw;">
+                                <optgroup label="Nº de Quartos">
+                                    <option value="12" selected>1 Quarto</option>
+                                    <option value="13">2 Quartos</option>
+                                    <option value="14">3+ Quartos</option>
+                                </optgroup>
+                            </select></div>
+                        <div class="col"><select style="width:15vw;">
+                                <optgroup label="Nº de Banheiros">
+                                    <option value="12" selected>1 Banheiro</option>
+                                    <option value="13">2 Banheiros</option>
+                                    <option value="14">3+ Banheiros</option>
+                                </optgroup>
+                            </select></div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-center"><i class="la la-car btn"
+                                style="color: #efefef; font-size:2em;"></i>
+                        </div>
+                        <div class="col d-flex justify-content-center"><i class="la la-dribbble btn"
+                                style="color: #efefef; font-size:2em;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- End: Search -->
     </div>
     @yield('content')

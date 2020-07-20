@@ -12,11 +12,8 @@ $(function () {
         }
     });
 
-    $(".search").click(function () {
-        $("#searchbar").slideToggle();
-        if (tela > 1199) {
-            $(".deskslider").fadeToggle("slow");
-        }
+    $(".config").click(function () {
+        $(".filtro").slideToggle();
     });
 
     $(".nav .nav-link").on("click", function () {
@@ -25,10 +22,6 @@ $(function () {
     });
 
     $(".home").click(function () {
-        $("#searchbar").slideUp();
-        if (tela > 1199) {
-            $(".deskslider").fadeIn("slow");
-        }
         $("html, body").animate({ scrollTop: 0 }, "slow");
         $(".nav").find(".active").removeClass("active");
         $(".home").addClass("active");
