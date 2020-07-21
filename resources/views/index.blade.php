@@ -71,9 +71,11 @@
                     <div class="col" style="margin-right: 10vw;">
                         <div class="row d-flex flex-column justify-content-center align-items-center">
                             <div class="col d-flex justify-content-center align-items-center">
-                                <h4 class="text-center" style="color: #143E7A; margin-bottom:8%;">
-                                    {{ $house->title }}
-                                </h4>
+                                <a href="#">
+                                    <h4 class="text-center" style="color: #143E7A; margin-bottom:8%;">
+                                        {{ $house->title }}
+                                    </h4>
+                                </a>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 5%;">
