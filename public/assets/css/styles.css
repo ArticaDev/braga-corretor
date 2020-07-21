@@ -100,3 +100,15 @@ h6 {
     color: white !important;
     transition: 1s;
 }
+
+.buy {
+    display: inline;
+    background: #143e7a;
+    border-radius: 10px;
+    box-shadow: 0 4px #cccccc;
+    padding: 20px 45px;
+    color: #ffffff;
+    display: inline-block;
+    font: normal normal 18px/1 "Montserrat", sans-serif;
+    text-align: center;
+}
