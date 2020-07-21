@@ -41,7 +41,7 @@
 
         <div>
             <nav class="navbar navbar-light navbar-expand-md">
-                <div class="container-fluid"><a class="navbar-brand" href="#"
+                <div class="container-fluid"><a class="navbar-brand" href="{{ route('casas.index') }}"
                         style="width: 80px;height: 30px;margin: 0px;padding: 0px;"><img
                             class="d-flex align-items-center" src="{{ asset('assets\img\Group 1.svg') }}"
                             style="width: 80px;height: 30px;" /></a><button data-toggle="collapse"
@@ -51,7 +51,8 @@
                     <div class="collapse navbar-collapse d-md-flex d-xl-flex justify-content-md-end justify-content-xl-end"
                         id="navcol-1">
                         <ul class="nav navbar-nav">
-                            <li role="presentation" class="nav-item"><a class="nav-link active home" href="#">Home</a>
+                            <li role="presentation" class="nav-item"><a class="nav-link active home"
+                                    href="{{ route('casas.index') }}">Home</a>
                             </li>
                             <li role="presentation" class="nav-item"><a class="nav-link pesquisa" href="#">Pesquisa</a>
                             </li>
@@ -139,7 +140,8 @@
                         style="color: rgb(255,255,255);"></i></a>
             </div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a class="home" href="#" style="color: rgb(255,255,255);">Home</a></li>
+                <li class="list-inline-item"><a class="home" href="{{ route('casas.index') }}"
+                        style="color: rgb(255,255,255);">Home</a></li>
                 <li class="list-inline-item"><a class="pesquisa" href="#" style="color: rgb(255,255,255);">Pesquisa</a>
                 </li>
             </ul>
