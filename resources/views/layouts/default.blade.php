@@ -71,41 +71,48 @@
         <div style="background-color: rgb(20,62,122); display:none;" class="search">
             <div class="container">
                 <div class="row">
-                    <div class="col d-flex align-items-center"><input type="search" placeholder="Digite o bairro"
-                            style="max-width:300px;" /> <i style="font-size:1.5em;"
-                            class="la la-search text-white btn"></i>
+                    <div style="margin-top:1%;margin-bottom:1%;"
+                        class="col d-flex align-items-center justify-content-lg-center justify-content-xl-center"><input
+                            type="search" placeholder="Digite o bairro" style="max-width:300px;" /> <i
+                            style="font-size:1.5em;" class="la la-search text-white btn"></i>
                         <i class="la la-cog btn config" style="color: #efefef; font-size:1.5em;"></i>
                         <i class="pesquisa la la-close btn" style="color: #efefef; font-size:1.5em;"></i>
                     </div>
                 </div>
 
-                <div class="filtro" style="margin-top:2%;display:none;">
+                <div class="filtro" style="display:none;">
+                    <div
+                        class="d-xl-flex d-lg-flex aling-items-center justify-content-center flex-lg-row flex-xl-row flex-sm-col flex-md-col">
+                        <div class="row">
+                            <div class="col d-flex align-items-center"><input type="search"
+                                    style="display:inline;max-width:40vw;" placeholder="Valor Máximo" />
+                                <input type="search" style="display:inline;margin-left:10px;max-width:40vw;"
+                                    placeholder="m² máx." />
+                            </div>
 
-                    <div class="row" style="margin-bottom:2%">
-                        <div class="col"><input type="search" style="max-width:40vw;" placeholder="Valor Máximo" />
                         </div>
-                        <div class="col"><input type="search" style="max-width:40vw;" placeholder="m² máx." /></div>
-                    </div>
-                    <div class="row" style="margin-bottom:3%">
-                        <div class="col-8 d-flex align-items-center"><select style="max-width:30vw; margin-right:2%;">
-                                <optgroup label="Nº de Quartos">
-                                    <option value="12" selected>1 Quarto</option>
-                                    <option value="13">2 Quartos</option>
-                                    <option value="14">3+ Quartos</option>
-                                </optgroup>
-                            </select>
-                            <select style="max-width:35vw;">
-                                <optgroup label="Nº de Banheiros">
-                                    <option value="12" selected>1 Banheiro</option>
-                                    <option value="13">2 Banheiros</option>
-                                    <option value="14">3+ Banheiros</option>
-                                </optgroup>
-                            </select>
-                            <i class="la la-car search-button"></i>
-                            <i class="la la-dribbble search-button"></i>
+                        <div class="row" style="margin-left:0px;">
+                            <div class="col d-flex align-items-center colsearch"><select
+                                    style="height:30px;max-width:30vw; margin-right:2%;">
+                                    <optgroup label="Nº de Quartos">
+                                        <option value="12" selected>1 Quarto</option>
+                                        <option value="13">2 Quartos</option>
+                                        <option value="14">3+ Quartos</option>
+                                    </optgroup>
+                                </select>
+                                <select style="height:30px;max-width:35vw; margin-left:10px;">
+                                    <optgroup label="Nº de Banheiros">
+                                        <option value="12" selected>1 Banheiro</option>
+                                        <option value="13">2 Banheiros</option>
+                                        <option value="14">3+ Banheiros</option>
+                                    </optgroup>
+                                </select>
+                                <i class="la la-car search-button"></i>
+                                <i class="la la-dribbble search-button"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="margin-top:1%;">
                         <div class="col d-flex justify-content-center"><button class="btn btn-success"
                                 style="margin-bottom:2%;">Pesquisar</button></div>
                     </div>

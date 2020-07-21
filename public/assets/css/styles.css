@@ -22,8 +22,8 @@ body {
 .search-button {
     cursor: pointer;
     color: #efefef;
-    font-size: 1.5em;
-    padding: 6px 12px;
+    font-size: 30px;
+    padding: 6px 6px;
     transition: 1s;
 }
 
@@ -77,20 +77,14 @@ body {
     .nav-link {
         color: black !important;
     }
+    .colsearch {
+        padding-left: 0px;
+    }
 }
 
 h6 {
     margin-bottom: 0px !important;
     font-size: 18px;
-}
-
-.search-btn-car,
-.search-btn-pool {
-    cursor: pointer;
-    font-size: 40px;
-    color: black;
-    margin: auto;
-    transition: 1s;
 }
 
 .white {
