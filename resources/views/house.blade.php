@@ -1,16 +1,18 @@
 @extends('layouts.default')
 @section('content')
 
-<div class="container" style="margin-bottom:5%;">
+<div class="container" style="margin-bottom:10%;">
     <div class="row" style="margin-top: 5vh;">
         <div class="col">
             <div data-ride="carousel" class="carousel slide" id="carousel-1">
                 <div role="listbox" class="carousel-inner d-flex">
                     @foreach ($house->image as $image)
                     <div class="carousel-item">
-                        <div class="row">
-                            <div class="col d-flex justify-content-center"><img
-                                    src="{{ asset('images/'.$image->filename) }}" style="height: 300px;" /></div>
+                        <div class="row photos">
+                            <div class="col d-flex justify-content-center item">
+                                <a href="{{ asset('images/'.$image->filename) }}">
+                                    <img src="{{ asset('images/'.$image->filename) }}" style="height: 300px;" /></a>
+                            </div>
                         </div>
 
                     </div>
@@ -79,13 +81,27 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col d-flex justify-content-center align-items-center" style="margin-top: 5vh;">
+                <div class="col d-flex justify-content-center align-items-center" style="margin-top: 1vh;">
                     <a style="color:transparent; "
-                        href="https://api.whatsapp.com/send?phone=5517981093483&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!">
-                        <button class="btn" type="button" style="font-size: 22px;background-color:#143E7A;width: 100%;">
+                        href="https://api.whatsapp.com/send?phone=5517992451895&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!">
+                        <button class="btn" type="button"
+                            style="font-size: 22px;background-color:#143E7A;width: 325px;">
                             <h5 class="text-white" style="  display: inline;
                 ">Quero Comprar!</h5><i class="icon ion-social-whatsapp-outline"
                                 style="color:white;margin-left:5%;"></i>
+                            <h5 style="display:inline;color:white;">1</h5>
+                        </button></a></div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <a style="color:transparent; "
+                        href="https://api.whatsapp.com/send?phone=5517992451895&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!">
+                        <button class="btn" type="button"
+                            style="font-size: 22px;background-color:#25D366;width: 325px;">
+                            <h5 class="text-white" style="  display: inline;
+                ">Quero Comprar!</h5><i class="icon ion-social-whatsapp-outline"
+                                style="color:white;margin-left:5%;"></i>
+                            <h5 style="display:inline;color:white;">2</h5>
                         </button></a></div>
             </div>
         </div>
