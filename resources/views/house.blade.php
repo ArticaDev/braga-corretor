@@ -1,19 +1,19 @@
 @extends('layouts.default')
 @section('content')
 
-<div class="container">
+<div class="container" style="margin-bottom:5%;">
     <div class="row" style="margin-top: 5vh;">
         <div class="col">
             <div data-ride="carousel" class="carousel slide" id="carousel-1">
                 <div role="listbox" class="carousel-inner d-flex">
                     @foreach ($house->image as $image)
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col d-flex justify-content-center"><img
-                                        src="{{ asset('images/'.$image->filename) }}" style="height: 300px;" /></div>
-                            </div>
-
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col d-flex justify-content-center"><img
+                                    src="{{ asset('images/'.$image->filename) }}" style="height: 300px;" /></div>
                         </div>
+
+                    </div>
                     @endforeach
                 </div>
                 <div><a href="#carousel-1" role="button" data-slide="prev" class="carousel-control-prev"
@@ -30,7 +30,7 @@
     </div>
     <div class="row" style="margin-top: 5vh;margin-bottom: 5vh;">
         <div class="col">
-            <h1 class="text-center" style="color: #9b1519;"><strong>{{ $house->title  }}</strong></h1>
+            <h1 class="text-center" style="color: rgb(20,62,122);"><strong>{{ $house->title  }}</strong></h1>
         </div>
     </div>
     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
@@ -66,7 +66,8 @@
                 <div class="col d-flex flex-row justify-content-center align-items-center justify-content-xl-center align-items-xl-center"
                     style="height: 54px;"><i class="la la-money"
                         style="font-size: 36px;margin-left: 3%;color: rgb(58,204,160);"></i>
-                    <h2 class="display-price" style="margin: 0px;margin-left: 15px;color: #18c38f;"><strong>{{ number_format($house->price, 2, '.', '')  }}</strong></h2>
+                    <h2 class="display-price" style="margin: 0px;margin-left: 15px;color: #18c38f;">
+                        <strong>{{ number_format($house->price, 2, '.', '')  }}</strong></h2>
                 </div>
             </div>
         </div>
@@ -78,23 +79,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col d-flex justify-content-center align-items-center" style="margin-top: 5vh;"><a
-                        style="color:transparent; "
-                        href="https://api.whatsapp.com/send?phone=5517981093483&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!"><img
-                            src="{{ asset('assets/img/Botão.png') }}" style="width: 250px;" /></a></div>
+                <div class="col d-flex justify-content-center align-items-center" style="margin-top: 5vh;">
+                    <a style="color:transparent; "
+                        href="https://api.whatsapp.com/send?phone=5517981093483&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!">
+                        <button class="btn" type="button" style="font-size: 22px;background-color:#143E7A;width: 100%;">
+                            <h5 class="text-white" style="  display: inline;
+                ">Quero Comprar!</h5><i class="icon ion-social-whatsapp-outline"
+                                style="color:white;margin-left:5%;"></i>
+                        </button></a></div>
             </div>
         </div>
     </div>
 </div>
 <script type="text/javascript">
-    $(function () {
+$(function() {
 
 
-        $('.carousel-item').first().addClass("active");
+    $('.carousel-item').first().addClass("active");
 
-        
-    });
 
+});
 </script>
 
 @endsection
