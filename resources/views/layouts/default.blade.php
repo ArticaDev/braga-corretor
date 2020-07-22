@@ -75,7 +75,7 @@
                         class="col d-flex align-items-center justify-content-lg-center justify-content-xl-center"><input
                             type="search" placeholder="Digite o bairro" style="max-width:300px;" /> <i
                             style="font-size:1.5em;" class="la la-search text-white btn"></i>
-                        <i class="la la-cog btn config" style="color: #efefef; font-size:1.5em;"></i>
+                        <i class="icon ion-android-options btn config" style="color: #efefef; font-size:1.5em;"></i>
                         <i class="pesquisa la la-close btn" style="color: #efefef; font-size:1.5em;"></i>
                     </div>
                 </div>
