@@ -1,27 +1,29 @@
 @extends('layouts.default')
 @section('content')
 
+
+@isset($new_house)
 <div class="simple-slider deskslider">
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide view"
-                style="background-image:url(https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+                style="background-image:url({{ asset('images/'.$new_house->image->get(1)->filename) }});">
                 <a href="#">
                     <div class="mask flex-center rgba-black-strong">
-                        <h1 style="color:white;">Título da casa</h1>
+                        <h1 style="color:white;">{{ $new_house->title }}</h1>
                         <h3 style="color:white;margin-top:5%">Venha conferir!</h3>
                     </div>
                 </a>
             </div>
             <div class="swiper-slide view"
-                style="background-image:url(https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+                style="background-image:url({{ asset('images/'.$new_house->image->get(2)->filename) }});">
                 <a href="#">
                     <div class="mask flex-center">
                     </div>
                 </a>
             </div>
             <div class="swiper-slide view"
-                style="background-image:url(https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+                style="background-image:url({{ asset('images/'.$new_house->image->get(3)->filename) }});">
                 <a href="#">
                     <div class="mask flex-center">
                     </div>
@@ -33,6 +35,7 @@
         <div class="swiper-button-next" style="background-image: url(assets/img/Rectangle%2033.png)"></div>
     </div>
 </div>
+@endisset
 
 
 <div class="container">

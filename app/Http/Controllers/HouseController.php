@@ -16,10 +16,10 @@ class HouseController extends Controller
      */
     public function index()
     {   
-        $new_houses = House::with('address','image')->take(3)->latest()->get();
+        $new_house = House::with('address','image')->latest()->first();
         $houses = House::with('address','image')->latest()->paginate(6);
 
-       return view('index',compact('new_houses','houses'));
+       return view('index',compact('new_house','houses'));
     }
 
     /**
