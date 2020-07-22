@@ -72,7 +72,7 @@
                         <div class="row d-flex flex-column justify-content-center align-items-center">
                             <div class="col d-flex justify-content-center align-items-center">
                                 <a href="#">
-                                    <h4 class="text-center" style="color: #143E7A; margin-bottom:8%;">
+                                    <h4 class="text-center" style="min-height:56px;color: #143E7A; margin-bottom:8%;">
                                         {{ $house->title }}
                                     </h4>
                                 </a>

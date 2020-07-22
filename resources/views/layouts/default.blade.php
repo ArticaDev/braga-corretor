@@ -77,9 +77,11 @@
                     <div style="margin-top:1%;margin-bottom:1%;"
                         class="col d-flex align-items-center justify-content-lg-center justify-content-xl-center"><input
                             type="search" placeholder="Digite o bairro" style="max-width:300px;" /> <i
-                            style="font-size:1.5em;" class="la la-search text-white btn"></i>
-                        <i class="icon ion-android-options btn config" style="color: #efefef; font-size:1.5em;"></i>
-                        <i class="pesquisa la la-close btn" style="color: #efefef; font-size:1.5em;"></i>
+                            style="font-size:1.5em;cursor:pointer;padding:6px 9px;" class="la la-search text-white"></i>
+                        <i class="icon ion-android-options config"
+                            style="color: #efefef; font-size:1.5em;cursor:pointer;padding:6px 6px;"></i>
+                        <i class="pesquisa la la-close"
+                            style="color: #efefef; font-size:1.5em;cursor:pointer;padding:6px 6px;"></i>
                     </div>
                 </div>
 
