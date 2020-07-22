@@ -46,7 +46,7 @@
 
                 <!-- Card image -->
                 <div class="simple-slider card-img-top">
-                    <a href="#">
+                    <a href="{{ route('casas.show',$house->id) }}">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
 
