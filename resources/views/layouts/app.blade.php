@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Admin - Fátima Imoveis</title>
+    <title>Admin - Braga Corretor</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -29,13 +29,13 @@
 
     <style>
       button{
-        background-color: rgb(155,21,25) !important;
-        border-color: rgb(155,21,25) !important;
+        background-color: #143E7A !important;
+        border-color: #143E7A !important;
       }
 
       /* .navbar{
-        background-color: rgb(155,21,25) !important;
-        border-color: rgb(155,21,25) !important;
+        background-color: #143E7A !important;
+        border-color: #143E7A !important;
       } */
       .navbar a{
         color: white !important;
@@ -50,7 +50,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('casas.index') }}"><img class="home"
-                    src="{{ asset('assets/img/Prancheta%202%20cópia%2014.svg') }}" style="width: 180px;"></a>
+                    src="{{ asset('assets\img\Group 1.svg') }}" style="width: 180px;"></a>
                 {{-- <a class="navbar-brand" href="{{ url('/') }}">
                    Admin - Fátima Imoveis
                 </a> --}}
