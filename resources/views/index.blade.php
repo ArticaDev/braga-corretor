@@ -8,7 +8,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide view"
                 style="background-image:url({{ asset('images/'.$new_house->image->get(1)->filename) }});">
-                <a href="#">
+                <a href="{{ route('casas.show',$new_house->id) }}">
                     <div class="mask flex-center rgba-black-strong">
                         <h1 style="color:white;">{{ $new_house->title }}</h1>
                         <h3 style="color:white;margin-top:5%">Venha conferir!</h3>
@@ -17,14 +17,14 @@
             </div>
             <div class="swiper-slide view"
                 style="background-image:url({{ asset('images/'.$new_house->image->get(2)->filename) }});">
-                <a href="#">
+                <a href="{{ route('casas.show',$new_house->id) }}">
                     <div class="mask flex-center">
                     </div>
                 </a>
             </div>
             <div class="swiper-slide view"
                 style="background-image:url({{ asset('images/'.$new_house->image->get(3)->filename) }});">
-                <a href="#">
+                <a href="{{ route('casas.show',$new_house->id) }}">
                     <div class="mask flex-center">
                     </div>
                 </a>
