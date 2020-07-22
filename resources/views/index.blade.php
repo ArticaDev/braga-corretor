@@ -36,7 +36,11 @@
     </div>
 </div>
 @endisset
-
+@isset($error)
+<div class="alert alert-danger">
+    <p>{{ $error }}</p>
+</div>
+@endisset
 
 <div class="container">
 
