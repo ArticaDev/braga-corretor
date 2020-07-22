@@ -8,128 +8,177 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Fátima Corretora</title>
+    <title>Braga Corretor</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link href="{{ asset('assets/css/Footer-Clean.css') }}" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="{{ asset('assets/css/Footer-Basic.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/Simple-Slider.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/Social-Icons.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-price-format/2.2.0/jquery.priceformat.min.js"></script>
     <script src="{{ asset('assets/js/Simple-Slider.js') }}"></script>
-    <script src="{{ asset('assets/js/animations.js') }}" ></script>
+    <script src="{{ asset('assets/js/animations.js') }}"></script>
 
 </head>
 
 <body>
     <div class="sticky-top">
         <!-- Start: Header - Mobile -->
-        <nav class="navbar navbar-light navbar-expand-md" style="background-color: #f1f1f1;">
-            <div class="container-fluid"><a class="navbar-brand" href="{{ route('casas.index') }}"><img class="home"
-                        src="{{ asset('assets/img/Prancheta%202%20cópia%2014.svg') }}" style="width: 180px;"></a><button
-                    data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
-                        navigation</span><span class="navbar-toggler-icon"
-                        style="background-image: url(&quot;{{ asset('assets/img/Hamburguer%20Button.svg') }}&quot;);"></span></button>
-                <div class="collapse navbar-collapse d-md-flex justify-content-md-end" id="navcol-1">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation"><a class="nav-link active home" href="{{ route('casas.index') }}">Home</a></li>
-                        <li class="nav-item" role="presentation"><a id="imoveis" class="nav-link search"
-                                href="#">Imóveis</a></li>
-                        <li class="nav-item" role="presentation"><a id="contato" class="nav-link" href="#">Contato</a>
-                        </li>
-                        <li class="nav-item" role="presentation"><a class="nav-link btn"><i
-                                    class="las la-search search"></i></a></li>
-                    </ul>
+
+        <div>
+            <nav class="navbar navbar-light navbar-expand-md">
+                <div class="container-fluid"><a class="navbar-brand" href="{{ route('casas.index') }}"
+                        style="width: 80px;height: 30px;margin: 0px;padding: 0px;"><img
+                            class="d-flex align-items-center" src="{{ asset('assets\img\Group 1.svg') }}"
+                            style="width: 80px;height: 30px;" /></a><button data-toggle="collapse"
+                        data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle
+                            navigation</span><span class="navbar-toggler-icon"
+                            style="background-image:url('../assets/img/bars-solid.svg'); color:white;"></span></button>
+                    <div class="collapse navbar-collapse d-md-flex d-xl-flex justify-content-md-end justify-content-xl-end"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li role="presentation" class="nav-item"><a class="nav-link active home"
+                                    href="{{ route('casas.index') }}">Home</a>
+                            </li>
+                            <li role="presentation" class="nav-item"><a class="nav-link pesquisa" href="#">Pesquisa</a>
+                            </li>
+                            <li role="presentation" class="nav-item"><a id="contato" class="nav-link"
+                                    href="#">Contato</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
+
         <!-- End: Header - Mobile -->
+
         <!-- Start: Search -->
-        <div class="row" id="searchbar" style="background-color: #9b1519; display:none;">
 
-            <div class="col-xl-2 d-flex justify-content-xl-center align-items-xl-center">
+        <div style="background-color: rgb(20,62,122); display:none;" class="search">
+            <div class="container">
+                <div class="row">
+                    <div style="margin-top:1%;margin-bottom:1%;"
+                        class="col d-flex align-items-center justify-content-lg-center justify-content-xl-center"><input
+                            type="search" placeholder="Digite o bairro" style="max-width:300px;" /> <i
+                            style="font-size:1.5em;" class="la la-search text-white btn"></i>
+                        <i class="icon ion-android-options btn config" style="color: #efefef; font-size:1.5em;"></i>
+                        <i class="pesquisa la la-close btn" style="color: #efefef; font-size:1.5em;"></i>
+                    </div>
+                </div>
+
+                <div class="filtro" style="display:none;">
+                    <div
+                        class="d-xl-flex d-lg-flex aling-items-center justify-content-center flex-lg-row flex-xl-row flex-sm-col flex-md-col">
+                        <div class="row">
+                            <div class="col d-flex align-items-center"><input type="search"
+                                    style="display:inline;max-width:40vw;" placeholder="Valor Máximo" />
+                                <input type="search" style="display:inline;margin-left:10px;max-width:40vw;"
+                                    placeholder="m² máx." />
+                            </div>
+
+                        </div>
+                        <div class="row" style="margin-left:0px;">
+                            <div class="col d-flex align-items-center colsearch"><select
+                                    style="height:30px;max-width:30vw; margin-right:2%;">
+                                    <optgroup label="Nº de Quartos">
+                                        <option value="12" selected>1 Quarto</option>
+                                        <option value="13">2 Quartos</option>
+                                        <option value="14">3+ Quartos</option>
+                                    </optgroup>
+                                </select>
+                                <select style="height:30px;max-width:35vw; margin-left:10px;">
+                                    <optgroup label="Nº de Banheiros">
+                                        <option value="12" selected>1 Banheiro</option>
+                                        <option value="13">2 Banheiros</option>
+                                        <option value="14">3+ Banheiros</option>
+                                    </optgroup>
+                                </select>
+                                <i class="la la-car search-button"></i>
+                                <i class="la la-dribbble search-button"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:1%;">
+                        <div class="col d-flex justify-content-center"><button class="btn btn-success"
+                                style="margin-bottom:2%;">Pesquisar</button></div>
+                    </div>
 
 
-                <input id="bairro" class="shadow" style="width: 100%;height: 40px;margin: 3%;"type="text" placeholder="Bairro">
+                </div>
 
-            </div>
-            <div class="col-xl-2 d-flex justify-content-xl-center align-items-xl-center"><select id="rooms" class="shadow"
-                    style="width: 100%;height: 40px;margin: 3%;">
-                    <option value="1" selected="">Quartos</option>
-                    <option value="1">1 Quarto</option>
-                    <option value="2">2 Quartos</option>
-                    <option value="3">3+ Quartos</option>
-                </select></div>
-            <div class="col-xl-2 d-flex justify-content-xl-center align-items-xl-center"><select id="bathrooms" class="shadow"
-                    style="width: 100%;height: 40px;margin: 3%;">
-                    <option value="1" selected="">Banheiros</option>
-                    <option value="1">1 Banheiro</option>
-                    <option value="2">2 Banheiros</option>
-                    <option value="3">3+ Banheiros</option>
-                </select></div>
-            <div class="col d-xl-flex align-items-xl-center"><input id="price" class="shadow display-price" type="text"
-                    style="padding-left: 3%;width: 100%;height: 40px;margin: 5%;" placeholder="Valor Máx."></div>
-
-            <div class="col d-flex align-items-center">
-              <i class="la la-car search-btn-car"></i>
-              <i class="las la-table-tennis search-btn-pool"></i></div>
-
-            <div class="col d-xl-flex justify-content-xl-end align-items-xl-center"><button id="search-btn"
-                    class="btn border rounded shadow" type="button"
-                    style="font-size:.8em;background-color: #ffffff;width: 90%;margin:5%;height: 40px;">Pesquisar</button>
             </div>
         </div>
-        <!-- End: Search -->
     </div>
-        @yield('content')
+    <!-- End: Search -->
+    </div>
+    @yield('content')
     <!-- Start: Footer -->
-    <div class="mt-5 social-icons"
-        style="background-color: rgb(155,21,25);height: 200px;margin-top: 0%; width:100%!important;">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center align-items-center" style="padding:0px;">
-                <a href="https://www.instagram.com/fatima.lima.imoveis/"><i class="icon ion-social-instagram-outline"
-                        style="color: rgb(255,255,255);"></i></a><i data-toggle="tooltip" data-placement="top" title="Copiar email" id="emailIcon" class="icon ion-email"
-                        style="color: rgb(255,255,255); cursor:pointer;"></i><a
-                    href="https://www.facebook.com/profile.php?id=100051747426880"><i class="icon ion-social-facebook"
-                        style="color: rgb(255,255,255);"></i></a>
+
+    <div class="footer-basic" style="background-color: rgb(20,62,122);">
+        <footer>
+            <div class="social">
+                <a href="#">
+                    <i data-toggle="tooltip" data-placement="top" title="Copiar email" id="emailIcon"
+                        class="icon ion-email" style="color: rgb(255,255,255); cursor:pointer;"></i></a>
                 <a
-                    href="https://api.whatsapp.com/send?phone=5517981093483&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!"><i
-                        class="icon ion-social-whatsapp-outline" style="color: rgb(255,255,255);"></i></a><a
-                    style="width: 80px;height: 60px;" href="https://www.olx.com.br/perfil/fatima-lima-2a1d3396"><img
-                        src="{{ asset('assets/img/olx_logo_freelogovectors.net_-white.png') }}" style="width: 60px;" /></a></div>
-        </div>
-        <a style="text-decoration:none;" href="https://articadev.com">
-            <p style="margin-top: 3vh;color: rgb(255,255,255);font-size: 1.25em;">Desenvolvido por Artica</p>
-        </a>
+                    href="https://api.whatsapp.com/send?phone=5517992451895&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!"><i
+                        data-toggle="tooltip" data-placement="top" title="Enviar mensagem no WhatsApp 1"
+                        class="icon ion-social-whatsapp-outline" style="color: rgb(255,255,255);"></i></a>
+                <a
+                    href="https://api.whatsapp.com/send?phone=5511948021701&text=Ol%C3%A1!%20Eu%20tenho%20interesse%20em%20comprar%20uma%20casa!"><i
+                        data-toggle="tooltip" data-placement="top" title="Enviar mensagem no WhatsApp 2"
+                        class="icon ion-social-whatsapp-outline" style="color: rgb(255,255,255);"></i></a>
+                <a href="https://www.facebook.com/terrenosembarretos/"><i data-toggle="tooltip" data-placement="top"
+                        title="Ir para o Facebook" class="icon ion-social-facebook"
+                        style="color: rgb(255,255,255);"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a class="home" href="{{ route('casas.index') }}"
+                        style="color: rgb(255,255,255);">Home</a></li>
+                <li class="list-inline-item"><a class="pesquisa" href="#" style="color: rgb(255,255,255);">Pesquisa</a>
+                </li>
+            </ul>
+            <p class="copyright" style="color: rgb(249,249,249);">Corretor Braga - CRECISP 69219-F / CNAI 21516</p>
+            <a style="text-decoration:none;" href="https://articadev.com">
+                <p class="copyright" style="color: rgb(249,249,249);">Desenvolvido por Artica © 2020</p>
+            </a>
+        </footer>
     </div>
+
+
     <!-- End: Footer -->
 
     <script type="text/javascript">
-        $(function () {
+    $(function() {
 
-            $('.display-price').priceFormat({
-                prefix: 'R$ ',
-                centsSeparator: ',',
-                thousandsSeparator: '.'
-            });
-
-            $('#search-btn').click(function() {
-
-                window.location.href = `{{url("pesquisar")}}?bairro=${$( "#bairro" ).val()}&rooms=${$( "#rooms" ).val()}&bathrooms=${$( "#bathrooms" ).val()}&price=${$( "#price" ).val()}&garage=${garage}&recreation=${recreation}`;
-             });
-
-
+        $('.display-price').priceFormat({
+            prefix: 'R$ ',
+            centsSeparator: ',',
+            thousandsSeparator: '.'
         });
 
+        $('#search-btn').click(function() {
+
+            window.location.href =
+                `{{url("pesquisar")}}?bairro=${$( "#bairro" ).val()}&rooms=${$( "#rooms" ).val()}&bathrooms=${$( "#bathrooms" ).val()}&price=${$( "#price" ).val()}&garage=${garage}&recreation=${recreation}`;
+        });
+
+
+    });
     </script>
 
 
