@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <link href="{{ asset('assets/css/Footer-Basic.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/Simple-Slider.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/Social-Icons.css') }}" rel="stylesheet">
@@ -30,6 +31,8 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-price-format/2.2.0/jquery.priceformat.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
+    </script>
     <script src="{{ asset('assets/js/Simple-Slider.js') }}"></script>
     <script src="{{ asset('assets/js/animations.js') }}"></script>
 
@@ -74,9 +77,11 @@
                     <div style="margin-top:1%;margin-bottom:1%;"
                         class="col d-flex align-items-center justify-content-lg-center justify-content-xl-center"><input
                             type="search" placeholder="Digite o bairro" style="max-width:300px;" /> <i
-                            style="font-size:1.5em;" class="la la-search text-white btn"></i>
-                        <i class="icon ion-android-options btn config" style="color: #efefef; font-size:1.5em;"></i>
-                        <i class="pesquisa la la-close btn" style="color: #efefef; font-size:1.5em;"></i>
+                            style="font-size:1.5em;cursor:pointer;padding:6px 9px;" class="la la-search text-white"></i>
+                        <i class="icon ion-android-options config"
+                            style="color: #efefef; font-size:1.5em;cursor:pointer;padding:6px 6px;"></i>
+                        <i class="pesquisa la la-close"
+                            style="color: #efefef; font-size:1.5em;cursor:pointer;padding:6px 6px;"></i>
                     </div>
                 </div>
 
