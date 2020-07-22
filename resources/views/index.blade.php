@@ -71,7 +71,7 @@
                     <div class="col" style="margin-right: 10vw;">
                         <div class="row d-flex flex-column justify-content-center align-items-center">
                             <div class="col d-flex justify-content-center align-items-center">
-                                <a href="#">
+                                <a href="{{ route('casas.show',$house->id) }}">
                                     <h4 class="text-center" style="min-height:56px;color: #143E7A; margin-bottom:8%;">
                                         {{ $house->title }}
                                     </h4>
