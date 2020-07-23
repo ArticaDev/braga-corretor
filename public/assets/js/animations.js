@@ -19,7 +19,7 @@ $(function () {
 
     $(".config").click(function () {
         $(".filtro").slideToggle();
-        $(".pesq").toggle();
+        $(".pesq").toggle("slow");
     });
 
     $(".search-button").on("click", function () {
@@ -61,5 +61,13 @@ $(function () {
             .attr("data-original-title", "Email copiado !")
             .tooltip("dispose")
             .tooltip("show");
+    });
+
+    $("#categories").change(function () {
+        if ($("#categories").val() == 2) {
+            $("#hide").toggle("slow");
+        } else {
+            $("#hide").show("slow");
+        }
     });
 });

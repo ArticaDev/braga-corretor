@@ -90,14 +90,21 @@
                     <div
                         class="d-xl-flex d-lg-flex aling-items-center justify-content-center flex-lg-row flex-xl-row flex-sm-col flex-md-col">
                         <div class="row">
-                            <div class="col d-flex align-items-center"><input id="price" class="display-price"
-                                    type="search" style="display:inline;max-width:40vw;" placeholder="Valor Máximo" />
-                                <input type="search" style="display:inline;margin-left:10px;max-width:40vw;"
-                                    placeholder="Título do lote" />
+                            <div id="col1" class="col d-flex align-items-center"><input id="price" class="display-price"
+                                    type="search" style="display:inline;max-width:32vw;" placeholder="Valor Máximo" />
+                                <input id="meters" class="display-price" type="search"
+                                    style="display:inline;max-width:28vw;margin-left:10px;" placeholder="m² Máximo" />
+                                <select id="categories" style="margin-left:10px;height:30px;max-width:30vw;">
+                                    <optgroup label="Categorias">
+                                        <option value="1" select>Casa</option>
+                                        <option value="3">Loteamentos</option>
+                                        <option value="2">Lotes / Terrenos</option>
+                                    </optgroup>
+                                </select>
                             </div>
 
                         </div>
-                        <div class="row" style="margin-left:0px;">
+                        <div id="hide" class="row" style="margin-left:0px;">
                             <div class="col d-flex align-items-center colsearch" style="padding:0 10px;"><select
                                     id="rooms" style="height:30px;max-width:30vw;">
                                     <optgroup label="Nº de Quartos">
@@ -175,6 +182,11 @@
             prefix: 'R$ ',
             centsSeparator: ',',
             thousandsSeparator: '.'
+        });
+
+        $('#meters').priceFormat({
+            prefix: '',
+            suffix: ' m²'
         });
 
         $('.search-btn').click(function() {
