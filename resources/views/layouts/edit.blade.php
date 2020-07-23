@@ -38,10 +38,7 @@
                 <div class="container-fluid"><a class="navbar-brand" href="{{ route('casas.index') }}"
                         style="width: 80px;height: 30px;margin: 0px;padding: 0px;"><img
                             class="d-flex align-items-center" src="{{ asset('assets\img\Group 1.svg') }}"
-                            style="width: 80px;height: 30px;" /></a><button data-toggle="collapse"
-                        data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle
-                            navigation</span><span class="navbar-toggler-icon"
-                            style="background-image:url('../assets/img/bars-solid.svg'); color:white;"></span></button>
+                            style="width: 80px;height: 30px;" /></a>
                     <div class="collapse navbar-collapse d-md-flex d-xl-flex justify-content-md-end justify-content-xl-end"
                         id="navcol-1">
 
