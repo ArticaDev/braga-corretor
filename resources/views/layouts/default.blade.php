@@ -97,8 +97,8 @@
                                 <select id="categories" style="margin-left:10px;height:30px;max-width:30vw;">
                                     <optgroup label="Categorias">
                                         <option value="1" select>Lotes</option>
-                                        <option value="2">Terrenos</option>
                                         <option value="3">Loteamentos</option>
+                                        <option value="2">Terrenos</option>
                                     </optgroup>
                                 </select>
                             </div>
