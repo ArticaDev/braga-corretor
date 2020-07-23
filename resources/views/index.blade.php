@@ -42,7 +42,7 @@
 </div>
 @endisset
 
-<div class="container">
+<div class="container" style="min-height:55.5vh;">
 
     <!-- Start: Card Group -->
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3" style="margin-top: 5vh;">

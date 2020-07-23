@@ -50,6 +50,11 @@
                     style="height: 54px;"><i class="las la-bath" style="font-size: 36px;margin-left: 3%;"></i>
                     <h3 style="margin: 0px;margin-left: 15px;">{{ $house->bathrooms  }} Banheiros</h3>
                 </div>
+                <div class="col d-flex flex-row justify-content-center align-items-center align-items-xl-center"
+                    style="height: 54px;"><i class="las la-ruler-horizontal"
+                        style="font-size: 36px;margin-left: 3%;"></i>
+                    <h3 style="margin: 0px;margin-left: 15px;">m²</h3>
+                </div>
 
                 @if($house->garage==1)
                 <div class="col d-flex flex-row justify-content-center align-items-center align-items-xl-center"

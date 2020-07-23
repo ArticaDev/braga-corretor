@@ -19,7 +19,7 @@ $(function () {
 
     $(".config").click(function () {
         $(".filtro").slideToggle();
-        $(".text-white").toggle();
+        $(".pesq").toggle();
     });
 
     $(".search-button").on("click", function () {
