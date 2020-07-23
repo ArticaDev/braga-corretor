@@ -64,6 +64,20 @@ body {
     }
 }
 
+@media (max-width: 991px) {
+    #hide {
+        margin-left: -8px !important;
+    }
+    #col1 {
+        margin-top: 0%;
+        margin-bottom: 1%;
+    }
+    .colsearch {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+}
+
 .navbar {
     background-image: url(../img/Ret.svg);
     background-position: top right;
