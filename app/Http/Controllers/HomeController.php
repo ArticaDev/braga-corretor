@@ -30,8 +30,8 @@ class HomeController extends Controller
         return view('edit',compact('houses'));
     }
 
-    public function create(){
-        return view('home');
+    public function create(Request $request){
+        return $request->get('tipo');
     }
     public function store(Request $request)
     {
