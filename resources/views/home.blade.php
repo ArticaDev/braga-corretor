@@ -14,7 +14,7 @@
 
     @if ($errors->any())
     <div class="alert alert-danger">
-        <strong>Erro!</strong> Por favor lembre-se de incluir as fotos da casa através do botão abaixo<br><br>
+        <strong>Erro!</strong> Por favor lembre-se de incluir as fotos através do botão abaixo<br><br>
     </div>
     @endif
 
@@ -33,8 +33,10 @@
             @csrf
         <div class="form-row">
         <div class="col">
-
+       
                 <div class="form-group">
+                    <input id="type" name="type" type="hidden" value="{{$type}}">
+
                     <label for="title">Título</label>
                     <input type="text" class="form-control" name="title" id="title" value="{{ isset($house) ? $house->title:'' }}" required>
                     <div class="invalid-feedback">
@@ -45,6 +47,13 @@
                     <div class="invalid-feedback">
                         Por insira um preço
                     </div>
+                    <label for="size">Tamanho</label>
+                    <input type="text" class="form-control" name="size" id="size" placeholder="0" value="{{ isset($house) ?  number_format($house->size, 2, '.', ''):'' }}" required>
+                    <div class="invalid-feedback">
+                        Por insira um tamanho
+                    </div>
+
+                    @if($type==1)
                     <div class="form-row">
                         <div class="col">
 
@@ -77,6 +86,17 @@
                             </select>
                         </div>
                     </div>
+                    @endif
+
+                    @if($type==3)
+                    <label for="tname">Nome do Loteamento</label>
+                    <input type="text" class="form-control" name="tname" id="tname" value="{{ isset($house) ? $house->tname:'' }}" required>
+                    <div class="invalid-feedback">
+                        Por favor escreva um nome para o loteamento
+                    </div>
+                    @endif
+
+
                     <label for="description">Descrição</label>
                     <textarea class="form-control" name="description" id="description" rows="3" required>{{ isset($house) ? $house->description :'' }}</textarea>
                     <div class="invalid-feedback">
@@ -117,6 +137,11 @@
             prefix: 'R$ ',
             centsSeparator: ',',
             thousandsSeparator: '.'
+        });
+        $('#size').priceFormat({
+            prefix: '',
+            centsSeparator: ',',
+            suffix: ' m²'
         });
 
         $("#uploadFile").fileinput({

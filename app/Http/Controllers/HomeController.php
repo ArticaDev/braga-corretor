@@ -31,7 +31,8 @@ class HomeController extends Controller
     }
 
     public function create(Request $request){
-        return $request->get('tipo');
+       
+        return view('home')->with('type',$request->get('tipo'));
     }
     public function store(Request $request)
     {
@@ -43,10 +44,13 @@ class HomeController extends Controller
         $house = new House;
         $house->title = $request->input('title');
         $house->description = $request->input('description');
-        $house->bathrooms = (int)$request->input('bathrooms');
-        $house->rooms = (int)$request->input('rooms');
-        $house->garage = (int)$request->input('garage');
-        $house->recreation = (int)$request->input('recreation');
+        $house->bathrooms = (int)$request->input('bathrooms',0);
+        $house->rooms = (int)$request->input('rooms',0);
+        $house->garage = (int)$request->input('garage',0);
+        $house->recreation = (int)$request->input('recreation',0);
+        $house->type = (int)$request->input('type');
+        $house->tname = $request->input('tname','');
+        $house->size = (double)str_replace(',', '.', str_replace(['m²','.'], '', $request->input('size')));
         $house->price = (double)str_replace(',', '.', str_replace(['R$','.'], '', $request->input('price')));
         $house->save();
 
@@ -72,8 +76,10 @@ class HomeController extends Controller
 
             }
         }
+        
+        $message = ['Casa registrada','Lote registrado','Loteamento registrado'];
 
-        return redirect('/admin')->with('success', 'Casa registrada');
+        return redirect('/admin')->with('success', $message[(int)$request->input('type')-1]);
 
     }
 

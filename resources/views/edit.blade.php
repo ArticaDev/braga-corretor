@@ -13,9 +13,9 @@
 
     <div class="row justify-content-center">
 
-                                <a class="btn btn-success ml-3" href="{{ route('admin.create','tipo=0') }}">Adicionar nova casa</a>
-                                <a class="btn btn-success ml-3" href="{{ route('admin.create','tipo=1') }}">Adicionar novo loteamento</a>
+                                <a class="btn btn-success ml-3" href="{{ route('admin.create','tipo=1') }}">Adicionar nova casa</a>
                                 <a class="btn btn-success ml-3" href="{{ route('admin.create','tipo=2') }}">Adicionar novo lote</a>
+                                <a class="btn btn-success ml-3" href="{{ route('admin.create','tipo=3') }}">Adicionar novo loteamento</a>
 
     </div>
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3" style="margin-top: 5vh;">

@@ -6,29 +6,27 @@
 <div class="simple-slider deskslider">
     <div class="swiper-container">
         <div class="swiper-wrapper">
+
+
+            @foreach ($new_house->image as $image)
+
             <div class="swiper-slide view"
-                style="background-image:url({{ asset('images/'.$new_house->image->get(0)->filename) }});">
+                style="background-image:url({{ asset('images/'.$image->filename) }});">
                 <a href="{{ route('casas.show',$new_house->id) }}">
-                    <div class="mask flex-center rgba-black-strong">
+                    
+                    <div class="mask flex-center {{$loop->index==0 ? 'rgba-black-strong' : ''}}">
+                        @if($loop->index ==0)
+
                         <h1 style="color:white;">{{ $new_house->title }}</h1>
                         <h3 style="color:white;margin-top:5%">Venha conferir!</h3>
+                        @endif
+
                     </div>
                 </a>
             </div>
-            <div class="swiper-slide view"
-                style="background-image:url({{ asset('images/'.$new_house->image->get(1)->filename) }});">
-                <a href="{{ route('casas.show',$new_house->id) }}">
-                    <div class="mask flex-center">
-                    </div>
-                </a>
-            </div>
-            <div class="swiper-slide view"
-                style="background-image:url({{ asset('images/'.$new_house->image->get(2)->filename) }});">
-                <a href="{{ route('casas.show',$new_house->id) }}">
-                    <div class="mask flex-center">
-                    </div>
-                </a>
-            </div>
+
+            @endforeach
+
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev" style="background-image: url(assets/img/Rectangle%2034.png)"></div>
