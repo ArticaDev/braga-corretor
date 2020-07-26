@@ -38,6 +38,9 @@
     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
         <div class="col">
             <div class="row row-cols-1">
+                <div class="col d-flex flex-row justify-content-center align-items-center">
+                    <h2 class="text-center" style="color:rgb(20,62,122);">Residencial Tamboré</h2>
+                </div>
                 <div class="col d-flex flex-row justify-content-center align-items-center align-items-xl-center"><i
                         class="icon ion-ios-home" style="font-size: 36px;margin-left: 3%;"></i>
                     <h3 style="margin: 0px;margin-left: 15px;">{{ $house->address->first()->bairro  }}</h3>
@@ -82,7 +85,7 @@
             <div class="row" id="coldesc">
                 <div class="col text-center">
                     <h5><strong>Descrição -</strong></h5>
-                    <p>{{ $house->description }}<br /></p>
+                    <p style="margin:4% 0;">{{ $house->description }}<br /></p>
                 </div>
             </div>
             <div class="row">

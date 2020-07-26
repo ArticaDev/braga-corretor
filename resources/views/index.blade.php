@@ -10,10 +10,9 @@
 
             @foreach ($new_house->image as $image)
 
-            <div class="swiper-slide view"
-                style="background-image:url({{ asset('images/'.$image->filename) }});">
+            <div class="swiper-slide view" style="background-image:url({{ asset('images/'.$image->filename) }});">
                 <a href="{{ route('casas.show',$new_house->id) }}">
-                    
+
                     <div class="mask flex-center {{$loop->index==0 ? 'rgba-black-strong' : ''}}">
                         @if($loop->index ==0)
 
@@ -84,6 +83,12 @@
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 5%;">
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <h5 class="text-center" style="color: #143E7A;">Residencial Tamboré</h5>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-bottom: 5%;">
                             <div class="col d-flex justify-content-left align-items-center"><i class="las la-home"
                                     style="font-size: 26px;margin-right: 5%;color: rgb(0,0,0);"></i>
                                 <h6>{{ $house->address->first()->bairro }}</h6>
@@ -91,7 +96,7 @@
                         </div>
 
 
-                @if($house->type==1)
+                        @if($house->type==1)
                         <div class="row" style="margin-bottom: 3%;">
                             <div class="col d-flex justify-content-left"><i class="la la-bed"
                                     style="font-size: 26px;margin-right: 5%;color: rgb(0,0,0);"></i>
@@ -130,26 +135,26 @@
 
                         @endif
 
-                @else
-                    @if ($house->type==3)
-                        
+                        @else
+                        @if ($house->type==3)
+
                         <div class="row" style="margin-bottom: 8%;">
                             <div class="col d-flex justify-content-left">
                                 <h6 class="text-center">{{ $house->tname }}</h6>
                             </div>
                         </div>
-                        
-                    @endif
 
-                <div class="row" style="margin-bottom: 8%;">
-                    <div class="col d-flex justify-content-left"><i class="las la-ruler-horizontal"
-                            style="font-size: 26px;margin-right: 5%;color: rgb(0,0,0);"></i>
-                        <h6 class="text-center">{{ number_format($house->size, 2, '.', '') }} m²</h6>
-                    </div>
-                </div>
+                        @endif
 
-                @endif
-                    
+                        <div class="row" style="margin-bottom: 8%;">
+                            <div class="col d-flex justify-content-left"><i class="las la-ruler-horizontal"
+                                    style="font-size: 26px;margin-right: 5%;color: rgb(0,0,0);"></i>
+                                <h6 class="text-center">{{ number_format($house->size, 2, '.', '') }} m²</h6>
+                            </div>
+                        </div>
+
+                        @endif
+
 
 
                         <div class="row" style="margin-bottom: 0%;">
