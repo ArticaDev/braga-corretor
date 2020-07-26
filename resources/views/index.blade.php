@@ -89,6 +89,9 @@
                                 <h6>{{ $house->address->first()->bairro }}</h6>
                             </div>
                         </div>
+
+
+                @if($house->type==1)
                         <div class="row" style="margin-bottom: 3%;">
                             <div class="col d-flex justify-content-left"><i class="la la-bed"
                                     style="font-size: 26px;margin-right: 5%;color: rgb(0,0,0);"></i>
@@ -126,6 +129,27 @@
                         </div>
 
                         @endif
+
+                @else
+                    @if ($house->type==3)
+                        
+                        <div class="row" style="margin-bottom: 8%;">
+                            <div class="col d-flex justify-content-left">
+                                <h6 class="text-center">{{ $house->tname }}</h6>
+                            </div>
+                        </div>
+                        
+                    @endif
+
+                <div class="row" style="margin-bottom: 8%;">
+                    <div class="col d-flex justify-content-left"><i class="las la-ruler-horizontal"
+                            style="font-size: 26px;margin-right: 5%;color: rgb(0,0,0);"></i>
+                        <h6 class="text-center">{{ number_format($house->size, 2, '.', '') }} m²</h6>
+                    </div>
+                </div>
+
+                @endif
+                    
 
 
                         <div class="row" style="margin-bottom: 0%;">
