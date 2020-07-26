@@ -82,11 +82,6 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row" style="margin-bottom: 5%;">
-                            <div class="col d-flex justify-content-center align-items-center">
-                                <h5 class="text-center" style="color: #143E7A;">Residencial Tamboré</h5>
-                            </div>
-                        </div>
 
                         <div class="row" style="margin-bottom: 5%;">
                             <div class="col d-flex justify-content-left align-items-center"><i class="las la-home"
@@ -138,9 +133,9 @@
                         @else
                         @if ($house->type==3)
 
-                        <div class="row" style="margin-bottom: 8%;">
-                            <div class="col d-flex justify-content-left">
-                                <h6 class="text-center">{{ $house->tname }}</h6>
+                        <div class="row" style="margin-bottom: 5%;">
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <h5 class="text-center" style="color: #143E7A;">{{ $house->tname }}</h5>
                             </div>
                         </div>
 

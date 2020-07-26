@@ -38,13 +38,20 @@
     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
         <div class="col">
             <div class="row row-cols-1">
+
+              @if($house->type==3)              
                 <div class="col d-flex flex-row justify-content-center align-items-center">
-                    <h2 class="text-center" style="color:rgb(20,62,122);">Residencial Tamboré</h2>
+                    <h2 class="text-center" style="color:rgb(20,62,122);">{{ $house->tname }}</h2>
                 </div>
+              @endif
+
                 <div class="col d-flex flex-row justify-content-center align-items-center align-items-xl-center"><i
                         class="icon ion-ios-home" style="font-size: 36px;margin-left: 3%;"></i>
                     <h3 style="margin: 0px;margin-left: 15px;">{{ $house->address->first()->bairro  }}</h3>
                 </div>
+
+              @if ($house->type==1)
+                  
                 <div class="col d-flex flex-row justify-content-center align-items-center align-items-xl-center"
                     style="height: 54px;"><i class="la la-bed" style="font-size: 36px;margin-left: 3%;"></i>
                     <h3 style="margin: 0px;margin-left: 15px;">{{ $house->rooms  }} Quartos</h3>
@@ -53,10 +60,12 @@
                     style="height: 54px;"><i class="las la-bath" style="font-size: 36px;margin-left: 3%;"></i>
                     <h3 style="margin: 0px;margin-left: 15px;">{{ $house->bathrooms  }} Banheiros</h3>
                 </div>
+             @endif  
+                
                 <div class="col d-flex flex-row justify-content-center align-items-center align-items-xl-center"
                     style="height: 54px;"><i class="las la-ruler-horizontal"
                         style="font-size: 36px;margin-left: 3%;"></i>
-                    <h3 style="margin: 0px;margin-left: 15px;">m²</h3>
+                    <h3 style="margin: 0px;margin-left: 15px;">{{ number_format($house->size, 2, '.', '') }} m²</h3>
                 </div>
 
                 @if($house->garage==1)
