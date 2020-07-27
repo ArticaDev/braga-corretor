@@ -64,8 +64,8 @@ $(function () {
     });
 
     $("#categories").change(function () {
-        if ($("#categories").val() == 2) {
-            $("#hide").toggle("slow");
+        if ($("#categories").val() == 2 || $("#categories").val() == 3) {
+            $("#hide").hide("slow");
         } else {
             $("#hide").show("slow");
         }
