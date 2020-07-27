@@ -39,13 +39,11 @@ $(function () {
     window.garage = 0;
     window.recreation = 0;
 
-    $(".search-btn-pool").click(function () {
-        $(this).toggleClass("white");
+    $("#recreation").click(function () {
         recreation = 1;
     });
 
-    $(".search-btn-car").click(function () {
-        $(this).toggleClass("white");
+    $("#garage").click(function () {
         garage = 1;
     });
 

@@ -120,8 +120,8 @@
                                         <option value="3">3+ Banheiros</option>
                                     </optgroup>
                                 </select>
-                                <i class="search-input la la-car search-button" style="padding-left:10px;"></i>
-                                <i class="search-input la la-dribbble search-button" style="padding-left:4px;"></i>
+                                <i id="garage" class="search-input la la-car search-button" style="padding-left:10px;"></i>
+                                <i id="recreation" class="search-input la la-dribbble search-button" style="padding-left:4px;"></i>
                             </div>
                         </div>
                     </div>
