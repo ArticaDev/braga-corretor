@@ -93,7 +93,7 @@
                             <div id="col1" class="col d-flex align-items-center"><input  id="price" class="search-input display-price"
                                     type="search" style="display:inline;max-width:32vw;" placeholder="Valor Máximo" />
                                 <input  id="size" class="search-input display-price" type="search"
-                                    style="display:inline;max-width:28vw;margin-left:10px;" placeholder="m² Máximo" />
+                                    style="display:inline;max-width:28vw;margin-left:10px;" placeholder="m² Mínimo" />
                                 <select class="search-input" id="categories" style="margin-left:10px;height:30px;max-width:30vw;">
                                     <optgroup label="Categorias">
                                         <option value="1" select>Casa</option>
