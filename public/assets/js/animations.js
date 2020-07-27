@@ -36,8 +36,8 @@ $(function () {
         $("html, body").animate({ scrollTop: $(document).height() }, "slow");
     });
 
-    window.garage = "";
-    window.recreation = "";
+    window.garage = 0;
+    window.recreation = 0;
 
     $(".search-btn-pool").click(function () {
         $(this).toggleClass("white");

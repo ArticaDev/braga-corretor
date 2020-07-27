@@ -76,7 +76,7 @@
                 <div class="row">
                     <div style="margin-top:1%;margin-bottom:1%;"
                         class="col d-flex align-items-center justify-content-lg-center justify-content-xl-center"><input
-                            id="bairro" type="search" placeholder="Digite o bairro" style="max-width:300px;" /> <i
+                            id="bairro" class="search-input" type="search" placeholder="Digite o bairro" style="max-width:300px;" /> <i
                             style="font-size:1.5em;cursor:pointer;padding:6px 9px;"
                             class="la la-search text-white search-btn pesq"></i>
                         <i class="icon ion-android-options config"
@@ -90,11 +90,11 @@
                     <div
                         class="d-xl-flex d-lg-flex aling-items-center justify-content-center flex-lg-row flex-xl-row flex-sm-col flex-md-col">
                         <div class="row">
-                            <div id="col1" class="col d-flex align-items-center"><input id="price" class="display-price"
+                            <div id="col1" class="col d-flex align-items-center"><input  id="price" class="search-input display-price"
                                     type="search" style="display:inline;max-width:32vw;" placeholder="Valor Máximo" />
-                                <input id="meters" class="display-price" type="search"
+                                <input  id="size" class="search-input display-price" type="search"
                                     style="display:inline;max-width:28vw;margin-left:10px;" placeholder="m² Máximo" />
-                                <select id="categories" style="margin-left:10px;height:30px;max-width:30vw;">
+                                <select class="search-input" id="categories" style="margin-left:10px;height:30px;max-width:30vw;">
                                     <optgroup label="Categorias">
                                         <option value="1" select>Casa</option>
                                         <option value="3">Loteamentos</option>
@@ -106,22 +106,22 @@
                         </div>
                         <div id="hide" class="row" style="margin-left:0px;">
                             <div class="col d-flex align-items-center colsearch" style="padding:0 10px;"><select
-                                    id="rooms" style="height:30px;max-width:30vw;">
+                                    id="rooms" class="search-input" style="height:30px;max-width:30vw;">
                                     <optgroup label="Nº de Quartos">
                                         <option value="1" selected>1 Quarto</option>
                                         <option value="2">2 Quartos</option>
                                         <option value="3">3+ Quartos</option>
                                     </optgroup>
                                 </select>
-                                <select id="bathrooms" style="height:30px;max-width:35vw; margin-left:10px;">
+                                <select id="bathrooms" class="search-input" style="height:30px;max-width:35vw; margin-left:10px;">
                                     <optgroup label="Nº de Banheiros">
                                         <option value="1" selected>1 Banheiro</option>
                                         <option value="2">2 Banheiros</option>
                                         <option value="3">3+ Banheiros</option>
                                     </optgroup>
                                 </select>
-                                <i class="la la-car search-button" style="padding-left:10px;"></i>
-                                <i class="la la-dribbble search-button" style="padding-left:4px;"></i>
+                                <i class="search-input la la-car search-button" style="padding-left:10px;"></i>
+                                <i class="search-input la la-dribbble search-button" style="padding-left:4px;"></i>
                             </div>
                         </div>
                     </div>
@@ -184,15 +184,21 @@
             thousandsSeparator: '.'
         });
 
-        $('#meters').priceFormat({
+        $('#size').priceFormat({
             prefix: '',
             suffix: ' m²'
         });
 
         $('.search-btn').click(function() {
 
-            window.location.href =
-                `{{url("pesquisar")}}?bairro=${$( "#bairro" ).val()}&rooms=${$( "#rooms" ).val()}&bathrooms=${$( "#bathrooms" ).val()}&price=${$( "#price" ).val()}&garage=${garage}&recreation=${recreation}`;
+            if($("#categories").val()==1){
+                window.location.href =`{{url("pesquisar")}}?bairro=${$( "#bairro" ).val()}&rooms=${$( "#rooms" ).val()}&bathrooms=${$( "#bathrooms" ).val()}&price=${$( "#price" ).val()}&size=${$( "#size" ).val()}&garage=${garage}&recreation=${recreation}&type=1`;
+            }else{
+
+             window.location.href =`{{url("pesquisar")}}?bairro=${$( "#bairro" ).val()}&price=${$( "#price" ).val()}&size=${$( "#size" ).val()}&type=${$( "#categories" ).val()}`;
+            }
+
+
         });
 
 

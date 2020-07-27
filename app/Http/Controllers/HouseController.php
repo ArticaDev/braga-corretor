@@ -66,8 +66,10 @@ class HouseController extends Controller
            'rooms' => ['>=','(int)$request->rooms'],
            'bathrooms' => ['>=','(int)$request->bathrooms'],
            'price' => ['<=','(double)str_replace(",", ".", str_replace(["R$","."], "", $request->price))'],
-           'garage' => ['=','(int)$request->garage'],
-           'recreation' => ['=','(int)$request->recreation'],
+           'garage' => ['>=','(int)$request->garage'],
+           'recreation' => ['>=','(int)$request->recreation'],
+           'size' => ['=>','(double)str_replace(",", ".", str_replace(["m²","."], "", $request->size))'],
+           'type' => ['=','(int)$request->type'],
 
         );
 
