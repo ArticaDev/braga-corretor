@@ -1,6 +1,6 @@
 @extends('layouts.edit')
 @section('content')
-<div class="container">
+<div class="container" style="min-height: 80vh;">
     <!-- Start: Slider -->
 
     <!-- End: Slider -->
