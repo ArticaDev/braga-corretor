@@ -10,6 +10,8 @@
 
             @foreach ($new_house->image as $image)
 
+            @if($loop->index < 3)
+
             <div class="swiper-slide view" style="background-image:url({{ asset('images/'.$image->filename) }});">
                 <a href="{{ route('casas.show',$new_house->id) }}">
 
@@ -23,6 +25,8 @@
                     </div>
                 </a>
             </div>
+            
+            @endif
 
             @endforeach
 
