@@ -30,24 +30,39 @@
 </head>
 
 <body>
+    
     <div class="sticky-top mb-3">
         <!-- Start: Header - Mobile -->
-
         <div>
             <nav class="navbar navbar-light navbar-expand-md">
                 <div class="container-fluid"><a class="navbar-brand" href="{{ route('casas.index') }}"
                         style="width: 80px;height: 30px;margin: 0px;padding: 0px;"><img
                             class="d-flex align-items-center" src="{{ asset('assets\img\Group 1.svg') }}"
-                            style="width: 80px;height: 30px;" /></a>
+                            style="width: 80px;height: 30px;" /></a><button data-toggle="collapse"
+                        data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle
+                            navigation</span><span class="navbar-toggler-icon"
+                            style="background-image:url('../assets/img/bars-solid.svg'); color:white;"></span></button>
                     <div class="collapse navbar-collapse d-md-flex d-xl-flex justify-content-md-end justify-content-xl-end"
                         id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li role="presentation" class="nav-item">
 
+                                    <a class="nav-link active home" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                  document.getElementById('logout-form').submit();">
+                                     {{ __('Sair') }}
+                                 </a>
+         
+                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                     @csrf
+                                 </form>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
         </div>
 
-        <!-- End: Header - Mobile -->
     </div>
         @yield('content')
     <!-- Start: Footer -->
