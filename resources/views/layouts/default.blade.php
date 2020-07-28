@@ -144,7 +144,7 @@
     <div class="footer-basic" style="background-color: rgb(20,62,122);">
         <footer>
             <div class="social">
-                <a href="#">
+                <a >
                     <i data-toggle="tooltip" data-placement="top" title="Copiar email" id="emailIcon"
                         class="icon ion-email" style="color: rgb(255,255,255); cursor:pointer;"></i></a>
                 <a
