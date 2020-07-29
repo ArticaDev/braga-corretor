@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh -p 65002 $SSH_USER@$SSH_HOST "cd domains/bragacorretor.com/braga-corretor && git pull origin develop && cp -r public/assets/. ../public_html/assets"
+            ssh -p 65002 $SSH_USER@$SSH_HOST "cd domains/corretorbraga.com/braga-corretor && git pull origin develop && cp -r public/assets/. ../public_html/assets"
 workflows:
   version: 2
   ssh-deploy:
