@@ -11,7 +11,7 @@
                         <div class="row photos">
                             <div class="col d-flex justify-content-center item">
                                 @if (in_array(pathinfo($image->filename, PATHINFO_EXTENSION),["mp4", "avi", "ogg", "webm"]))
-                                    <video style="height: 300px;"  controls>
+                                    <video style="height: 300px; max-width:80vw;"  controls>
                                             <source src="{{ asset('images/'.$image->filename) }}" type="video/{{pathinfo($image->filename, PATHINFO_EXTENSION)}}">
                                     </video>
                                 @else
@@ -22,6 +22,7 @@
                         </div>
                     </div>
 
+                    @endforeach
                     <!-- modal -->
                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -53,7 +54,6 @@
                       </div>
                     </div>
                     <!-- fim do modal -->
-                    @endforeach
 
 
                     
