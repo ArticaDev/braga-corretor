@@ -10,7 +10,7 @@
 
             @foreach ($new_house->image as $image)
 
-            @if($loop->index < 3)
+            @if($loop->index < 3 && !in_array(pathinfo($image->filename, PATHINFO_EXTENSION),["mp4", "avi", "ogg", "webm"]))
 
             <div class="swiper-slide view" style="background-image:url({{ asset('images/'.$image->filename) }});">
                 <a href="{{ route('casas.show',$new_house->id) }}">
@@ -58,11 +58,11 @@
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
 
-                                @foreach($house->image as $image)
-                                @if($loop->index < 3) <div class="swiper-slide"
-                                    style="background-image:url({{ asset('images/'.$image->filename) }}); height:226px;">
-                            </div>
-                            @endif
+                            @foreach($house->image as $image)
+                                @if($loop->index < 3 && !in_array(pathinfo($image->filename, PATHINFO_EXTENSION),["mp4", "avi", "ogg", "webm"]))
+                                 <div class="swiper-slide" style="background-image:url({{ asset('images/'.$image->filename) }}); height:226px;">
+                                </div>
+                                @endif
                             @endforeach
 
                         </div>

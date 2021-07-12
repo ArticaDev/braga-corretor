@@ -20,7 +20,7 @@
 
     @if (!isset($house))
     <div class="w-100 p-3">
-        <input form="house-info" id="uploadFile" name="uploadFile[]" type="file" multiple accept="image">
+        <input form="house-info" id="uploadFile" name="uploadFile[]" type="file" multiple>
     </div>
     @endif
 
@@ -149,8 +149,8 @@
             showUpload: false,
             initialPreviewDownloadUrl: false,
             language: "pt-BR",
-            allowedFileExtensions: ['jpg', 'png', 'gif'],
-            maxFileSize: 15000,
+            allowedFileExtensions: ['jpg', 'png', 'gif','mp4', 'avi', 'ogg', 'webm'],
+            maxFileSize: 20000,
 
         });
         

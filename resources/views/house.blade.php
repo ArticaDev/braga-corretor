@@ -11,7 +11,14 @@
                         <div class="row photos">
                             <div class="col d-flex justify-content-center item">
                                 <a href="{{ asset('images/'.$image->filename) }}">
-                                    <img src="{{ asset('images/'.$image->filename) }}" style="height: 300px;" /></a>
+                                @if (in_array(pathinfo($image->filename, PATHINFO_EXTENSION),["mp4", "avi", "ogg", "webm"]))
+                                    <video style="height: 300px;"  controls>
+                                            <source src="{{ asset('images/'.$image->filename) }}" type="video/{{pathinfo($image->filename, PATHINFO_EXTENSION)}}">
+                                    </video>
+                                @else
+                                    <img src="{{ asset('images/'.$image->filename) }}" style="height: 300px;" />
+                                @endif
+                                </a>
                             </div>
                         </div>
 
