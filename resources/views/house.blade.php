@@ -10,20 +10,53 @@
                     <div class="carousel-item">
                         <div class="row photos">
                             <div class="col d-flex justify-content-center item">
-                                <a href="{{ asset('images/'.$image->filename) }}">
                                 @if (in_array(pathinfo($image->filename, PATHINFO_EXTENSION),["mp4", "avi", "ogg", "webm"]))
                                     <video style="height: 300px;"  controls>
                                             <source src="{{ asset('images/'.$image->filename) }}" type="video/{{pathinfo($image->filename, PATHINFO_EXTENSION)}}">
                                     </video>
                                 @else
-                                    <img src="{{ asset('images/'.$image->filename) }}" style="height: 300px;" />
+                                    <button style="background: transparent;color: transparent;border: transparent;" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                                    <img src="{{ asset('images/'.$image->filename) }}" style="height: 300px;" /></button>
                                 @endif
-                                </a>
                             </div>
                         </div>
-
                     </div>
+
+                    <!-- modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <!-- implementar image cycling aqui :D -->
+                                <img style="width:100%;" class="img-fluid mx-auto" src="{{ asset('images/'.$image->filename) }}" />
+                                </div>
+                            </div>
+                            <a style="background-color:black;" class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a  style="background-color:black;"class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- fim do modal -->
                     @endforeach
+
+
+                    
                 </div>
                 <div><a href="#carousel-1" role="button" data-slide="prev" class="carousel-control-prev"
                         style="margin-right: 0px;margin-left: 10%;"><span class="carousel-control-prev-icon"
