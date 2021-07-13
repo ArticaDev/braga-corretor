@@ -35,10 +35,13 @@
                           <div class="modal-body">
                           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <!-- implementar image cycling aqui :D -->
-                                <img style="width:100%;" class="img-fluid mx-auto" src="{{ asset('images/'.$image->filename) }}" />
-                                </div>
+                                @foreach ($house->image as $key=>$image)
+                                    @if (!in_array(pathinfo($image->filename, PATHINFO_EXTENSION),["mp4", "avi", "ogg", "webm"]))
+                                        <div class="{{$key==0?'carousel-item active':'carousel-item'}}">
+                                            <img style="width:100%;" class="img-fluid mx-auto" src="{{ asset('images/'.$image->filename) }}" />
+                                        </div>
+                                    @endif
+                                @endforeach
                             </div>
                             <a style="background-color:black;" class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
