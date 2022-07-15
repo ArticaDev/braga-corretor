@@ -1,8 +1,8 @@
 FROM webdevops/php-apache:7.4-alpine
 WORKDIR /app
 ENV WEB_DOCUMENT_ROOT /app/public
-COPY  composer.* ./
-COPY  database/ database/
+COPY --chown=application:application composer.* ./
+COPY --chown=application:application database/ database/
 RUN composer install --ignore-platform-reqs --no-interaction --no-scripts --prefer-dist
-COPY  . ./
+COPY --chown=application:application . ./
 EXPOSE 80
