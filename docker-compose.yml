@@ -2,13 +2,10 @@ version: '3.5'
 
 services:
   braga-app:
-    build:
-      context: '.'
-
+    build: '.'
     container_name: braga-app
-
     volumes:
-      - .:/var/www/html
+      - .:/app
     ports:
       - 8000:80
 #     networks:
