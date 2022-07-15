@@ -5,4 +5,5 @@ COPY --chown=application:application composer.* ./
 COPY --chown=application:application database/ database/
 RUN composer install --ignore-platform-reqs --no-interaction --no-scripts --prefer-dist
 COPY --chown=application:application . ./
+RUN php artisan storage:link
 EXPOSE 80
